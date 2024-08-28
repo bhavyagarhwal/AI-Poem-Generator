@@ -19,7 +19,9 @@ function App() {
 
   useEffect(() => {
     // Initialize WebSocket connection
-    const socket = new WebSocket("ws://localhost:9000/ws");
+    const socket = new WebSocket(
+      "ws://ai-poem-generator-q7tj.onrender.com//ws"
+    );
 
     socket.onopen = () => {
       console.log("WebSocket connection established");
@@ -37,9 +39,12 @@ function App() {
   const fetchPoem = async (prompt) => {
     setIsLoading(true);
     try {
-      const response = await axios.post("http://localhost:9000/generate-poem", {
-        prompt,
-      });
+      const response = await axios.post(
+        "https://ai-poem-generator-q7tj.onrender.com/generate-poem",
+        {
+          prompt,
+        }
+      );
       console.log("Received poem response:", response.data);
       setPoemData({
         title: response.data.title || "Your Generated Poem Title",
@@ -57,9 +62,12 @@ function App() {
 
   const analyzePoem = async () => {
     try {
-      const response = await axios.post("http://localhost:9000/analyze-poem", {
-        poem: poemData.poem,
-      });
+      const response = await axios.post(
+        "https://ai-poem-generator-q7tj.onrender.com/analyze-poem",
+        {
+          poem: poemData.poem,
+        }
+      );
       setEmotionAnalysis(response.data.analysis);
     } catch (error) {
       console.error("Error analyzing poem:", error);
