@@ -252,7 +252,7 @@ from flask_socketio import SocketIO
 import os
 
 app = Flask(__name__)
-CORS(app)  # Enable CORS to allow requests from the frontend
+CORS(app , resources={r"/*": {"origins": "*"}})  # Enable CORS to allow requests from the frontend
 socketio = SocketIO(app, cors_allowed_origins="*")
 GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 # Configure the Google Generative AI model
