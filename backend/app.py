@@ -332,4 +332,4 @@ def handle_disconnect():
     print('Client disconnected')
 
 if __name__ == '__main__':
-    socketio.run(app, port=9000, debug=True)
+    socketio.run(app, port=9000, debug=True , allow_unsafe_werkzeug=True)
