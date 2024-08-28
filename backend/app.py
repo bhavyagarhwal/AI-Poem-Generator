@@ -247,13 +247,14 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS
 import google.generativeai as genai
 from flask_socketio import SocketIO
+import os
 
 app = Flask(__name__)
 CORS(app)  # Enable CORS to allow requests from the frontend
 socketio = SocketIO(app, cors_allowed_origins="*")
-
+GEMINI_API_KEY = os.environ(GEMINI_API_KEY)
 # Configure the Google Generative AI model
-genai.configure(api_key="AIzaSyD1CLgcgi3G0WsQU00AbY4GzgCNwVdWbFs")
+genai.configure(api_key="GEMINI_API_KEY")
 
 generation_config = {
     "temperature": 1,
