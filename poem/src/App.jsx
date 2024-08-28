@@ -19,7 +19,7 @@ function App() {
 
   useEffect(() => {
     // Initialize WebSocket connection
-    const socket = new WebSocket("ws://localhost:9000/ws");
+    const socket = new WebSocket("ws://ai-poem-generator-q7tj.onrender.com/ws");
 
     socket.onopen = () => {
       console.log("WebSocket connection established");
