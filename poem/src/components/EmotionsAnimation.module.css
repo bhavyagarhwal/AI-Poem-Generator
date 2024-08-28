@@ -1,0 +1,17 @@
+.animationContainer {
+  width: 700px; 
+  height: 600px; 
+  border: 2px solid rgb(255, 165, 0); 
+  border-radius: 10px; 
+  background-color: #1e1e1e; 
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  margin-top: 20px; 
+}
+
+.placeholderText {
+  font-size: 1rem;
+  color: #bbb;
+}

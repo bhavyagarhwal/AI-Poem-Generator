@@ -1,0 +1,36 @@
+.detailsContainer {
+  width: 700px;
+  height: 600px; 
+  border: 2px solid rgb(255, 165, 0); 
+  border-radius: 10px; 
+  background-color: #1e1e1e; 
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4); 
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+  padding: 20px;
+  margin-top: 20px; 
+  color: #fff;
+  text-align: center; 
+}
+
+
+@media (max-width: 768px) {
+  .detailsContainer {
+    width: 90%; 
+    height: auto; 
+  }
+}
+
+.placeholderText {
+  font-size: 1rem; 
+  color: #bbb;
+}
+
+
+.pieChartContainer {
+  margin-top: 20px; 
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}

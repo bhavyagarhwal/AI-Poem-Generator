@@ -1,0 +1,35 @@
+.poemBox {
+  margin-top: 30px;
+  color: #eee;
+  padding: 20px;
+  border: 2px solid rgb(255, 165, 0); /* Orange border color */
+  border-radius: 10px; /* Rounded corners */
+  background-color: #222; /* Dark background color for the poem box */
+  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.4); /* Darker shadow for better contrast */
+  width: 900px; /* Width of the poem box */
+  height: 600px; /* Height of the poem box */
+  margin-left: auto;
+  margin-right: auto;
+  display: flex; /* Flexbox for centering content */
+  flex-direction: column;
+  justify-content: center; /* Center content vertically */
+  align-items: center; /* Center content horizontally */
+  overflow-y: auto; /* Scroll for long content */
+}
+
+.poemContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.poemText {
+  font-size: 1.2rem;
+  color: #eee; /* Lighter text color for dark mode */
+  font-style: italic;
+  line-height: 1.6;
+  text-align: center; /* Center-align text inside the poem box */
+  white-space: pre-line; /* Preserve whitespace and newlines */
+  margin: 0; /* Remove default margins */
+}
