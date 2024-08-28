@@ -243,6 +243,8 @@
 # if __name__ == '__main__':
 #     app.run(port=9000, debug=True)
 
+
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS
 import google.generativeai as genai
@@ -252,7 +254,7 @@ import os
 app = Flask(__name__)
 CORS(app)  # Enable CORS to allow requests from the frontend
 socketio = SocketIO(app, cors_allowed_origins="*")
-GEMINI_API_KEY = os.environ(GEMINI_API_KEY)
+GEMINI_API_KEY = os.environ.get("GEMINI_API_KEY")
 # Configure the Google Generative AI model
 genai.configure(api_key="GEMINI_API_KEY")
 
